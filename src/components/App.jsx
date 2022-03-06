@@ -9,48 +9,16 @@ import TextField from "@mui/material/TextField";
 import SendIcon from "@mui/icons-material/Send";
 import { grey } from "@mui/material/colors";
 import Chats from "./chats/Chats";
+import ChatBox from "./chatBox/ChatBox";
+
+const chatText = {
+  message: "wewewewewe",
+  time: "12:30",
+  date: "12/12/2020",
+  custID: 1123123123,
+  apiKey: "1233313223124124",
+};
 
 export default function BasicCard() {
-  return (
-    <Card
-      sx={{
-        maxWidth: 400,
-        mx: "auto",
-        my: "5vh",
-        bgcolor: "text.secondary",
-        borderRadius: 2,
-      }}
-    >
-      <CardHeader
-        sx={{ bgcolor: "success.main" }}
-        subheaderTypographyProps={{ color: grey[200] }}
-        subheader="Admin Dafi Gumawang priadi"
-      />
-
-      <CardContent sx={{ height: "60vh" }}>
-        <Chats></Chats>
-      </CardContent>
-      <CardActions
-        sx={{
-          borderRadius: 2,
-          border: 1,
-          bgcolor: "white",
-          borderColor: "white",
-        }}
-      >
-        <Box sx={{ display: "flex", width: "100%" }}>
-          <TextField
-            variant="standard"
-            color="success"
-            placeholder="Message"
-            fullWidth
-            size="small"
-          />
-          <IconButton>
-            <SendIcon />
-          </IconButton>
-        </Box>
-      </CardActions>
-    </Card>
-  );
+  return <ChatBox></ChatBox>;
 }
