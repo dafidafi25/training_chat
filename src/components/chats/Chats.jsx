@@ -1,18 +1,10 @@
-import Box from "@mui/material/Box";
-import { deepOrange } from "@mui/material/colors";
-import { Avatar } from "@mui/material";
-import { Typography } from "@mui/material";
 import React, { useState } from "react";
 import Customer from "./customer/Customer";
+import Admin from "./admin/Admin";
 
 export default function Chats(Props) {
-  const [hover, setHover] = useState(false);
+  const CustomerComponent = <Customer chatText={Props.chatText}></Customer>;
+  const AdminComponent = <Admin chatText={Props.chatText}></Admin>;
 
-  const loadChat = () => {
-    if ("custID" in Props.chatText) {
-      return <Customer></Customer>;
-    }
-  };
-
-  return <React.Fragment>{loadChat}</React.Fragment>;
+  return "custID" in Props.chatText ? CustomerComponent : AdminComponent;
 }

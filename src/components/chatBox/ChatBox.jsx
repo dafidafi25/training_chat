@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
@@ -22,7 +22,6 @@ const chatText = [
     message: "chat 2",
     time: "12:33",
     date: "12/12/2020",
-    custID: "N",
     apiKey: "1233313223124124",
   },
   {
@@ -45,7 +44,7 @@ export default function BasicCard() {
         maxWidth: 400,
         mx: "auto",
         my: "5vh",
-        bgcolor: "text.secondary",
+        bgcolor: grey[200],
         borderRadius: 2,
       }}
     >
